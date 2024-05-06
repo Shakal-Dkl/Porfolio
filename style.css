@@ -6,6 +6,7 @@
 
 body {
   background: #081b29;
+  color: #ededed;
 }
 
 .header {
@@ -19,4 +20,41 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+}
+.logo {
+  font-size: 25px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 1s;
+}
+.navbar a:hover {
+  color: #00abf0;
+}
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.home-content {
+  max-width: 500px;
+}
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
 }
