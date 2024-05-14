@@ -1,85 +1,109 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+  <header class="header">
+    <a href="#" class="logo">Event's</a>
+    <nav class="navbar">
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/Réalisations">Réalisations</RouterLink>
+      <RouterLink to="/contact">Contact</RouterLink>
+    </nav>
   </header>
 
   <RouterView />
+
+  <footer>
+    <!--dans le footer on mettera les liens des réseaux et la maj du site-->
+    <div class="Réseaux">
+      <a href="#"><i class="bx bxl-linkedin"></i></a>
+      <a href="#"><i class="bx bxl-facebook"></i></a>
+      <a href="https://github.com/Shakal-Dkl" target="_blank"
+        ><i class="bx bxl-github"></i
+      ></a>
+    </div>
+    <div class="para">
+      <p>Dernière mise a jour le 14 Mai 2024</p>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: yellowgreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+  font-size: 25px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-nav {
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 1s;
+}
+
+.navbar a:hover {
+  color: #00abf0;
+}
+
+.para {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+.Réseaux {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+.Réseaux a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+}
+.Réseaux a:hover {
+  color: #081b29;
+}
+.Réseaux a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: yellowgreen;
+  z-index: -1;
+  transition: 0.5s;
+}
+.Réseaux a:hover:before {
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
 }
 </style>
