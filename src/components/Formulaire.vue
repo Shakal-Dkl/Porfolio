@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <h1>FORMULAIRES</h1>
+</template>
 
 <script></script>
 

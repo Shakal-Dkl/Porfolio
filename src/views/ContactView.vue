@@ -1,6 +1,8 @@
-<template></template>
+<template>
+  <Formulaire />
+</template>
 
-<script>
+<script setup>
 import Formulaire from "../components/Formulaire.vue";
 </script>
 

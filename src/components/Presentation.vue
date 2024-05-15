@@ -13,7 +13,7 @@
       </div>
       <div class="btn-box">
         <a href="#">Compétences</a>
-        <a href="#">Réalisations</a>
+        <a href="#">CV</a>
       </div>
     </section>
   </main>
