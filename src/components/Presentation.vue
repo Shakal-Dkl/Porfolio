@@ -21,7 +21,7 @@
 
 <style scoped>
 .home {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   padding: 0 10%;
