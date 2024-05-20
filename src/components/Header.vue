@@ -2,7 +2,7 @@
   <header class="header">
     <a href="#" class="logo">Event's</a>
     <nav class="navbar">
-      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/">Accueil</RouterLink>
       <RouterLink to="/Réalisations">Réalisations</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
     </nav>
