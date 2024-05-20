@@ -2,30 +2,30 @@
   <section class="contact" id="contact">
     <h1 class="titre">Contactez Moi !</h1>
 
-    <form action="#">
+    <form id="form" action="#">
       <div class="input-box">
         <div class="input-field">
-          <input type="text" placeholder="Nom" required />
+          <input type="text" id="name" placeholder="Nom" required />
           <span class="focus"></span>
         </div>
         <div class="input-field">
-          <input type="text" placeholder="Prenom" required />
+          <input type="text" id="prenom" placeholder="Prenom" required />
           <span class="focus"></span>
         </div>
       </div>
 
       <div class="input-box">
         <div class="input-field">
-          <input type="text" placeholder="Objet" required />
+          <input type="text" id="objet" placeholder="Objet" required />
           <span class="focus"></span>
         </div>
         <div class="input-field">
-          <input type="text" placeholder="Email" required />
+          <input type="text" id="email" placeholder="Email" required />
           <span class="focus"></span>
         </div>
       </div>
 
-      <div class="textarea-field">
+      <div id="message" class="textarea-field">
         <textarea
           name=""
           id=""
@@ -37,14 +37,49 @@
         <span class="focus"></span>
       </div>
 
-      <div class="btn-box btns">
-        <button type="submit" class="btn">Envoyer</button>
+      <div class="btn-box_btns">
+        <button @click="sendEmail()" type="submit" id="button" class="btn">
+          Envoyer
+        </button>
       </div>
     </form>
   </section>
 </template>
 
-<script></script>
+<script>
+import emailjs from "emailjs";
+
+export default {
+  data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        objet: "",
+        message: "",
+      },
+      status: "",
+    };
+  },
+  methods: {
+    sendEmail() {
+      const serviceID = "service_gflp98k";
+      const templateID = "template_vux1erl";
+      const userID = "vUJq0rUeLxzDZ-OLd";
+      emailjs.send(serviceID, templateID, this.form, userID).then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          this.status = "Email envoyé avec succès !";
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          this.status = "Erreur lors de votre envoi mail.";
+        }
+      );
+    },
+  },
+};
+</script>
 
 <style scoped>
 .titre {
@@ -101,5 +136,24 @@
 
 .contact form .textarea-field textarea {
   resize: none;
+}
+
+.btn-box_btns {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: yellowgreen;
+  border: 2px solid #00abf0;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
 }
 </style>

@@ -24,9 +24,10 @@
 .Réseaux {
   display: flex;
   justify-content: center;
-  justify-content: space-around;
+  justify-items: end;
 }
 .Réseaux a {
+  margin: 3rem;
   position: relative;
   display: inline-flex;
   justify-content: center;
