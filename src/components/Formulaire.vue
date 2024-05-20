@@ -5,28 +5,44 @@
     <form id="form" action="#">
       <div class="input-box">
         <div class="input-field">
-          <input type="text" id="name" placeholder="Nom" required />
+          <input type="text" v-model="form.nom" placeholder="Nom" required />
           <span class="focus"></span>
         </div>
         <div class="input-field">
-          <input type="text" id="prenom" placeholder="Prenom" required />
+          <input
+            type="text"
+            v-model="form.prenom"
+            placeholder="Prenom"
+            required
+          />
           <span class="focus"></span>
         </div>
       </div>
 
       <div class="input-box">
         <div class="input-field">
-          <input type="text" id="objet" placeholder="Objet" required />
+          <input
+            type="text"
+            v-model="form.objet"
+            placeholder="Objet"
+            required
+          />
           <span class="focus"></span>
         </div>
         <div class="input-field">
-          <input type="text" id="email" placeholder="Email" required />
+          <input
+            type="text"
+            v-model="form.email"
+            placeholder="Email"
+            required
+          />
           <span class="focus"></span>
         </div>
       </div>
 
-      <div id="message" class="textarea-field">
+      <div class="textarea-field">
         <textarea
+          v-model="form.message"
           name=""
           id=""
           cols="30"
@@ -47,13 +63,14 @@
 </template>
 
 <script>
-import emailjs from "emailjs";
+import emailjs from "@emailjs/browser";
 
 export default {
   data() {
     return {
       form: {
-        name: "",
+        nom: "",
+        prenom: "",
         email: "",
         objet: "",
         message: "",
