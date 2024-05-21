@@ -2,14 +2,18 @@
   <footer>
     <!--dans le footer on mettera les liens des réseaux et la maj du site-->
     <div class="Réseaux">
-      <a href="#"><i class="bx bxl-linkedin"></i></a>
-      <a href="#"><i class="bx bxl-facebook"></i></a>
+      <a href="https://fr.linkedin.com/" target="_blank"
+        ><i class="bx bxl-linkedin"></i
+      ></a>
+      <a href="https://www.facebook.com" target="_blank"
+        ><i class="bx bxl-facebook"></i
+      ></a>
       <a href="https://github.com/Shakal-Dkl" target="_blank"
         ><i class="bx bxl-github"></i
       ></a>
     </div>
     <div class="para">
-      <p>Dernière mise a jour le 14 Mai 2024</p>
+      <p>Dernière mise a jour le 21 Mai 2024</p>
     </div>
   </footer>
 </template>
@@ -32,8 +36,8 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: transparent;
   border: 2px solid #00abf0;
   border-radius: 50%;

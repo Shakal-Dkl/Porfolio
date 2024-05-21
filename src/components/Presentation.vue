@@ -5,10 +5,12 @@
         <h1>Bonjour,<br />je m'appelle Ambroise Rony</h1>
         <h3>Developpeur Front-end</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex sed
-          temporibus laudantium autem ad quisquam corporis ducimus aperiam?
-          Rerum, non reprehenderit odio laborum excepturi debitis voluptates?
-          Ipsa dolorem possimus aliquid.
+          Je suis actuellement en formation Développeur Web et Web Mobile
+          (DWWM), pour acquérir les compétences requises pour ma future
+          carrière... Vous trouverez certains de mes projets en ici..., <br />de
+          quoi prendre contact avec moi. il y aura des mise a jour,
+          amélioration, nouveau contenu au fur et a mesure de mon avancer dans
+          la formation et plus.
         </p>
       </div>
       <div class="btn-box">
@@ -28,21 +30,21 @@
 }
 
 .home-content {
-  max-width: 500px;
+  max-width: 800px;
 }
 .home-content h1 {
-  font-size: 56px;
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1.2;
 }
 .home-content h3 {
-  font-size: 32px;
+  font-size: 3rem;
   font-weight: 700;
   color: #00abf0;
 }
 .home-content p {
-  font-size: 16px;
-  margin: 20px 0 40px;
+  font-size: 1.5rem;
+  margin: 100px 0 100px;
 }
 .home-content .btn-box {
   display: flex;
@@ -70,19 +72,19 @@
 }
 
 .btn-box a:hover {
-  color: yellowgreen;
+  color: #00abf0;
 }
 
 .btn-box a:nth-child(2) {
   background: transparent;
-  color: yellowgreen;
+  color: #00abf0;
 }
 .btn-box a:nth-child(2):hover {
   color: #081b29;
 }
 
 .btn-box a:nth-child(2)::before {
-  background: yellowgreen;
+  background: #00abf0;
 }
 
 .btn-box a::before {
