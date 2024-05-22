@@ -9,7 +9,10 @@
           atque mollitia. Saepe deserunt iure quod enim possimus repellat alias
           impedit!
         </p>
-        <a href="https://github.com/Shakal-Dkl/Mon-CV.git" target="_blank"
+        <a
+          class="link"
+          href="https://github.com/Shakal-Dkl/Mon-CV.git"
+          target="_blank"
           >Création d'un cv pour un devoir</a
         >
       </div>
