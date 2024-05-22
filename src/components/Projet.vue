@@ -60,7 +60,7 @@
         >
       </div>
       <div class="right">
-        <a href="/img/Dyna.jpeg"
+        <a href="/img/Dyna.jpeg" target="_blank"
           ><img src="/img/Dyna.jpeg" alt="image dynamiser un formulaire"
         /></a>
       </div>
