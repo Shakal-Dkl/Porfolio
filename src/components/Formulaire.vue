@@ -3,7 +3,7 @@
     <h1 class="titre">Contactez Moi !</h1>
     <p class="status" v-if="status">{{ status }}</p>
 
-    <form id="form" @submit.prevent="sendEmail" action="#">
+    <form id="form" @submit.prevent="sendEmail()" action="#">
       <div class="input-box">
         <div class="input-field">
           <input
@@ -88,6 +88,7 @@ export default {
   },
   methods: {
     sendEmail() {
+      //Verifie si les champs sont vides ou pas.
       if (!this.verifChamps()) {
         return (this.status = " veuillez remplir tous les champs");
       }
@@ -100,7 +101,7 @@ export default {
           this.status = "Email envoyé avec succès !";
         },
         (error) => {
-          console.log("FAILED...", error.status, error.text);
+          console.log("FAILED...", error);
           this.status = "Erreur lors de votre envoi mail.";
         }
       );
@@ -109,7 +110,13 @@ export default {
     },
     //methods de verification des champs.
     verifChamps() {
-      return this.form;
+      return (
+        this.form.nom &&
+        this.form.prenom &&
+        this.form.email &&
+        this.form.objet &&
+        this.form.message
+      );
     },
 
     //methods qui reset le formulaire.
@@ -125,6 +132,11 @@ export default {
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .status {
   display: flex;
   justify-content: center;
@@ -192,7 +204,6 @@ export default {
   width: 150px;
   height: 50px;
   background: #081b29;
-  background-color: ;
   border-radius: 15px;
   border: #00abf0 solid;
   color: #00abf0;
