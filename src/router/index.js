@@ -11,12 +11,12 @@ const router = createRouter({
     },
 
     {
-      path: "/Réalisations",
-      name: "Réalisations",
+      path: "/RealisationView",
+      name: "RealisationView",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/RéalisationsView.vue"),
+      component: () => import("../views/RealisationView.vue"),
     },
 
     {
@@ -26,6 +26,11 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/ContactView.vue"),
+    },
+    {
+      path: "/:catchAll(.*)",
+      name: "NotFound",
+      component: () => import("../views/Error404.vue"),
     },
   ],
 });
