@@ -4,4 +4,12 @@
 
 <script></script>
 
-<style scoped></style>
+<style scoped>
+img {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  width: 900px;
+  height: 900px;
+}
+</style>
