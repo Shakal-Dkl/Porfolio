@@ -1,13 +1,13 @@
 <script setup>
 import Formulaire from "../components/Formulaire.vue";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
+import TheHeader from "../components/TheHeader.vue";
+import TheFooter from "../components/TheFooter.vue";
 </script>
 
 <template>
-  <Header />
+  <TheHeader />
   <Formulaire />
-  <Footer />
+  <TheFooter />
 </template>
 
 <style scoped></style>

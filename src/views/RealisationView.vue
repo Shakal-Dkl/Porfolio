@@ -1,15 +1,15 @@
 <script setup>
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
+import TheHeader from "../components/TheHeader.vue";
+import TheFooter from "../components/TheFooter.vue";
 import Projet from "../components/Projet.vue";
 </script>
 
 <template>
-  <Header />
+  <TheHeader />
 
   <Projet />
 
-  <Footer />
+  <TheFooter />
 </template>
 
 <style></style>

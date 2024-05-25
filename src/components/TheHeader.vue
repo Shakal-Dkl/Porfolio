@@ -3,7 +3,7 @@
     <a href="#top" class="logo">Event's</a>
     <nav class="navbar">
       <RouterLink to="/">Accueil</RouterLink>
-      <RouterLink to="/Réalisations">Réalisations</RouterLink>
+      <RouterLink to="/RealisationView">Réalisations</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
     </nav>
   </header>
