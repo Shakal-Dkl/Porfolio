@@ -100,8 +100,6 @@
 
 .cv img {
   width: 300px;
-  border: #00abf0 solid;
-  box-shadow: 5px 5px 10px #00abf0;
 }
 
 .cacharge {
@@ -127,8 +125,6 @@
 }
 .cacharge img {
   width: 300px;
-  border: #00abf0 solid;
-  box-shadow: 5px 5px 10px #00abf0;
 }
 
 .dynaform {
@@ -155,9 +151,8 @@
 
 .dynaform img {
   width: 300px;
-  border: #00abf0 solid;
-  box-shadow: 5px 5px 10px #00abf0;
 }
+
 .mainprojet a {
   text-decoration: none;
   color: #ededed;
@@ -169,5 +164,10 @@
   border: yellowgreen solid;
   border-radius: 15px;
   transition: 0.9s;
+}
+img:hover {
+  width: 300px;
+  border: #00abf0 solid;
+  box-shadow: 5px 5px 10px #00abf0;
 }
 </style>
