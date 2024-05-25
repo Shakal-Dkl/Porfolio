@@ -1,12 +1,12 @@
 <script setup>
 import Presentation from "../components/Presentation.vue";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
+import TheHeader from "../components/TheHeader.vue";
+import TheFooter from "../components/TheFooter.vue";
 </script>
 
 <template>
   <header>
-    <Header />
+    <TheHeader />
   </header>
 
   <main>
@@ -14,6 +14,6 @@ import Footer from "../components/Footer.vue";
   </main>
 
   <footer>
-    <Footer />
+    <TheFooter />
   </footer>
 </template>
