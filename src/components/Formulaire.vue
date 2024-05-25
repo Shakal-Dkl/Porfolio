@@ -3,7 +3,7 @@
     <h1 class="titre">Contactez Moi !</h1>
     <p class="status" v-if="status">{{ status }}</p>
 
-    <form id="form" @submit.prevent="sendEmail()" action="#">
+    <form @submit.prevent="sendEmail()" action="#">
       <div class="input-box">
         <div class="input-field">
           <input
@@ -53,7 +53,7 @@
       <div class="textarea-field">
         <textarea
           v-model="form.message"
-          name=""
+          name="message"
           id="message"
           cols="30"
           rows="10"
@@ -99,14 +99,13 @@ export default {
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           this.status = "Email envoyé avec succès !";
+          this.resetForm();
         },
         (error) => {
-          console.log("FAILED...", error);
+          console.log("FAILED...", error.status, error.text);
           this.status = "Erreur lors de votre envoi mail.";
         }
       );
-      //appel de la methods (resetForm) apres la methods sendMail.
-      this.resetForm();
     },
     //methods de verification des champs.
     verifChamps() {
