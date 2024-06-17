@@ -36,6 +36,9 @@
   text-decoration: none;
   font-weight: 600;
 }
+.logo:active {
+  color: #00abf0;
+}
 
 .navbar a {
   font-size: 18px;
