@@ -68,7 +68,21 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import Modale from "./Modale.vue";
+
+export default {
+  name: "projet",
+  data() {
+    return {
+      revele: false,
+    };
+  },
+  components: {
+    modale: Modale,
+  },
+};
+</script>
 
 <style scoped>
 * {
